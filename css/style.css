@@ -1,0 +1,61 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+.randomText {
+  margin: 2em;
+  padding: 2em;
+  background-color: darkgrey;
+  opacity: 70%;
+  border: 1px solid grey;
+}
+
+.header {
+  margin: 0;
+  background-color: darkgrey;
+  text-align: center;
+  opacity: 70%;
+}
+
+#randomText {
+  text-align: center;
+  color: white;
+}
+
+.tarea {
+  margin: 2em;
+  padding: 2em;
+  background-color: white;
+  text-decoration: underline;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+}
+.tareaValue {
+  margin: 2em;
+  padding: 0.2em 1em 0.2em 1em;
+  background-color: white;
+}
+.info {
+  position: absolute;
+  font-size: 14px;
+  text-decoration: underline;
+  bottom: 8px;
+  right: 16px;
+}
+
+.info:hover + .hide {
+  display: block;
+  color: yellow;
+  position: absolute;
+  background-color: black;
+  font-size: 12px;
+  bottom: 22px;
+  right: 16px;
+}

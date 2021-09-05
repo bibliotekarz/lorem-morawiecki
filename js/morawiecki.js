@@ -27,11 +27,11 @@ function start() {
     switchText()
 }
 
-function tareaInsert(){
-return document.getElementById("tarea").innerHTML = "<div class=\"tareaValue\"><p class=\"tareaValue\">" + switchText() + " " + switchText() + " " + switchText() + "</p><p class=\"tareaValue\">" + switchText() + " " + switchText() + " " + switchText() + "</p><p class=\"tareaValue\">" + switchText() + " " + switchText() + " " + switchText() + "<\p></div>" ;
+function tareaInsert() {
+    return document.getElementById("tarea").innerHTML = "<div class=\"tareaValue\"><p class=\"tareaValue\">" + switchText() + " " + switchText() + " " + switchText() + "</p><p class=\"tareaValue\">" + switchText() + " " + switchText() + " " + switchText() + "</p><p class=\"tareaValue\">" + switchText() + " " + switchText() + " " + switchText() + "<\p></div>";
 
-document.getElementsByClassName("tareaValue").style.height = "margin: 2em";
-document.getElementsByClassName("tareaValue").style.padding = "2em";
-document.getElementsByClassName("tareaValue").style.backgroundColor = "white";
-document.getElementsByClassName("tareaValue").style.fontSize = "12px";
+    document.getElementsByClassName("tareaValue").style.height = "margin: 2em";
+    document.getElementsByClassName("tareaValue").style.padding = "2em";
+    document.getElementsByClassName("tareaValue").style.backgroundColor = "white";
+    document.getElementsByClassName("tareaValue").style.fontSize = "12px";
 }

@@ -37,11 +37,13 @@ html, body {
   display: flex;
   justify-content: center;
 }
+
 .tareaValue {
   margin: 2em;
   padding: 0.2em 1em 0.2em 1em;
   background-color: white;
 }
+
 .info {
   position: absolute;
   font-size: 14px;

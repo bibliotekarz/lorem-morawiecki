@@ -29,13 +29,18 @@ html, body {
 }
 
 .tarea {
-  margin: 2em;
+  margin: 1em 2em 1em 2em;
   padding: 2em;
   background-color: white;
   text-decoration: underline;
   border-radius: 1em;
   display: flex;
   justify-content: center;
+}
+
+
+#akapity {
+  opacity: 60%;
 }
 
 .tareaValue {

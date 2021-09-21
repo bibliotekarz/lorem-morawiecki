@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Lorem Morawiecki generator wypowiedzi</title>
+	<title>Lorem Morawiecki generator tekstów przemówienia</title>
 	<script src='js/morawiecki.js'></script>
 	<link rel="stylesheet" href="css/style.css">
 
@@ -11,14 +11,20 @@
 
 <body onload="start()">
 	<div class="main" id="main">
-		<h1 class="header">Generator Lorem Morawiecki</h1>
+		<h1 class="header">Lorem Morawiecki generator tekstów</h1>
 		<h2 class="randomText"><span id="randomText"></span></h2>
 		<div class="info">Info &amp; &copy;.</div>
 		<div class="hide">Użyte zostały zdjęcia z profilu Kancelarii Premiera w serwisie flickr udostępnione
 			na wolnych licencjach i zgodnie z ich warunkami.<br>Żaden z tekstów nie jest prawdziwy.</div>
 
-		<div id="tarea"  ><span id="spanarea" class="tarea">Kliknij żeby wygenerować 3 akapity Mateoprzemowy (około 2000 znaków)</span></div>
-		<div id="akapity"><p>lol</p> </div> 
+		<div class="tarea">
+			<p>Wybierz suwakiem ile akapitów wygenerować i kliknij &#128522; </p>
+			<input id="ileakapitow" name="ileakapitow" type="range" min="1" step="1" max="10" value="3">
+			<p>Wygeneruję <output id="akapity" name="akapity" for="ileakapitow"> 3 </output> (czyli około <output
+					id="znaki" name="znaki" for="ileakapitow"> 2000 </output> znaków).</p>
 
+		</div>
+		<div id="trzyAkapity">
+		</div>
 	</div>
 </body>

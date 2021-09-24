@@ -32,12 +32,6 @@ html, body {
   background-color: transparent;
 }
 
-mark {
-  background-color: transparent;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-}
-
 #ileakapitow {
   width: 30%;
   background-color: #00aed9;
@@ -102,7 +96,7 @@ mark {
   stroke: #025094;
 }
 
-.text {
+.kopiuj {
   color: #fff;
   /*  font-family: 'Roboto Condensed';
   font-size: 22px;

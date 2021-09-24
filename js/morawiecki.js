@@ -65,16 +65,20 @@ function start() {
     document.getElementById("ileakapitow").addEventListener("input", przelicz);
     document.getElementById("ileakapitow").addEventListener("click", generujAkapity);
     document.getElementById("ileakapitow").value = 3;
-    switchText()
+    document.getElementById("svg-wrapper").style.display = "none";
+    document.getElementById("kopiuj").addEventListener("click", copyTextToClipboard);
+
+    switchText();
 }
 function przelicz() {
     let ile = parseInt(document.getElementById("ileakapitow").value);
     let akapityodmiana = ["akapitów", "akapit", "akapity"];
     document.getElementById("akapity").value = ile;
     document.getElementById("odmiana").value = odmien(ile, akapityodmiana);
-    document.getElementById("znaki").value = ile * 670;
+    document.getElementById("znaki").value = ile * 660;
 }
 function generujAkapity() {
+    document.getElementById("svg-wrapper").style.display = "inherit";
     let ile = parseInt(document.getElementById("ileakapitow").value);
     let i = 0;
     let tekst = "";
@@ -104,3 +108,11 @@ var odmien = function (value, numerals) {
     console.log(vo);
     return vo.join(' ');
 };
+
+function copyTextToClipboard(){
+
+navigator.clipboard.writeText(document.getElementById("trzyAkapity").innerText);
+
+/* Alert the copied text 
+alert("Copied the text: " + copyText);*/
+}

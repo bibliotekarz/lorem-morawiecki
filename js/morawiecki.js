@@ -81,3 +81,5 @@ function generujAkapity() {
     document.getElementById("trzyAkapity").innerHTML = "<div class=\"tareaValue\">" + tekst + "</div>";
     return
 }
+
+// TODO: dodać kopiowanie do schowka

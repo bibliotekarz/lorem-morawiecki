@@ -40,6 +40,8 @@ function switchText() {
         "nie potrzebuje pouczeń ze strony tych, którzy za nic mają honor i przyzwoitość.",
         "potrafi zbudować gospodarcze eldorado oparte na tradycji chrześcijańskiej."];
 
+    let ile = parseInt(document.getElementById("ileakapitow").value);
+
     let randomNumber0 = Math.floor(Math.random() * string0.length);
     let randomNumber1 = Math.floor(Math.random() * string1.length);
     let randomNumber2 = Math.floor(Math.random() * string2.length);
@@ -67,7 +69,9 @@ function start() {
 }
 function przelicz() {
     let ile = parseInt(document.getElementById("ileakapitow").value);
+    let akapityodmiana = ["akapitów", "akapit", "akapity"];
     document.getElementById("akapity").value = ile;
+    document.getElementById("odmiana").value = odmien(ile, akapityodmiana);
     document.getElementById("znaki").value = ile * 670;
 }
 function generujAkapity() {
@@ -78,8 +82,25 @@ function generujAkapity() {
         tekst = tekst + "<p class=\"tareaValue1\">" + switchText() + " " + switchText() + " " + switchText() + "</p>";
         i++;
     }
+
     document.getElementById("trzyAkapity").innerHTML = "<div class=\"tareaValue\">" + tekst + "</div>";
     return
 }
 
 // TODO: dodać kopiowanie do schowka
+var odmien = function (value, numerals) {
+    let ile = parseInt(document.getElementById("ileakapitow").value);
+
+    var t0 = value % 10,
+        t1 = value % 100,
+        vo = [];
+    if (value === 1 && numerals[1])
+        vo.push(numerals[1]);
+    else if ((value == 0 || (t0 >= 0 && t0 <= 1) || (t0 >= 5 && t0 <= 9) || (t1 > 10 && t1 < 20)) && numerals[0])
+        vo.push(numerals[0]);
+    else if (((t1 < 10 || t1 > 20) && t0 >= 2 && t0 <= 4) && numerals[2])
+        vo.push(numerals[2]);
+
+    console.log(vo);
+    return vo.join(' ');
+};

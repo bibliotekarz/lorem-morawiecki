@@ -28,13 +28,28 @@ html, body {
   color: white;
 }
 
+.menu {
+  background-color: transparent;
+}
+
+mark {
+  background-color: transparent;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+#ileakapitow {
+  width: 30%;
+  background-color: #00aed9;
+}
+
 .tarea {
   margin: 1em 2em 1em 2em;
   padding: 2em;
   background-color: white;
   border-radius: 1em;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 #trzyAkapity {
@@ -65,47 +80,48 @@ html, body {
   right: 16px;
 }
 
+
 /* ------------------------------- */
 
 .svg-wrapper {
   height: 40px;
-	margin: 0 auto;
+  margin: 0 auto;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   width: 180px;
   border-radius: 10px;
-  background-color: darksalmon;
+  background-color: #0074d9;
 }
 
 .shape {
   fill: transparent;
-/*  stroke-dasharray: 140 540;*/
-  stroke-dashoffset: -474; 
+  /*  stroke-dasharray: 140 540;*/
+  stroke-dashoffset: -474;
   stroke-width: 2px;
-  stroke: #19f6e8;
+  stroke: #025094;
 }
 
 .text {
   color: #fff;
-/*  font-family: 'Roboto Condensed';
+  /*  font-family: 'Roboto Condensed';
   font-size: 22px;
   letter-spacing: 8px; */
   text-align: center;
   text-decoration: underline;
- /* line-height: 32px; */
+  /* line-height: 32px; */
   position: relative;
   top: -30px;
 }
 
 @keyframes draw {
   0% {
-    stroke-dasharray: 140 540; 
+    stroke-dasharray: 140 540;
     stroke-dashoffset: -474;
     stroke-width: 2px;
   }
   100% {
-    stroke-dasharray: 760; 
+    stroke-dasharray: 760;
     stroke-dashoffset: 0;
     stroke-width: 6px;
   }

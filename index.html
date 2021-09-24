@@ -4,7 +4,6 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Lorem Morawiecki generator tekstów przemówienia</title>
-	<script src='js/morawiecki.js'></script>
 	<link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -17,21 +16,24 @@
 		<div class="hide">Użyte zostały zdjęcia z profilu Kancelarii Premiera w serwisie flickr udostępnione
 			na wolnych licencjach i zgodnie z ich warunkami.<br>Żaden z tekstów nie jest prawdziwy.</div>
 
-		<div class="tarea">
-			<div>
-			<p>Wybierz suwakiem ile akapitów wygenerować i kliknij &#128522; </p>
-			<input id="ileakapitow" name="ileakapitow" type="range" min="1" step="1" max="10" value="3">
-			<p>Wygeneruję <output id="akapity" name="akapity" for="ileakapitow"> 3 </output> (czyli około <output
-					id="znaki" name="znaki" for="ileakapitow"> 2000 </output> znaków).</p>
-				</div>
-<div class="svg-wrapper">
-						<svg height="40" width="180" xmlns="http://www.w3.org/2000/svg">
-						  <rect class="shape" height="40" width="180" rx="10" />
-						</svg>
-						 <div class="text">Kopiuj do schowka</div>
-					  </div>
-		</div>					
+		<div class="menu">
+			<div class="tarea">
+				<p>Wybierz suwakiem ile akapitów wygenerować i kliknij &#128522;</p>
+				<input id="ileakapitow" name="ileakapitow" type="range" min="1" step="1" max="10" value="3">
+				<p>Wygeneruję <output id="akapity" name="akapity" for="ileakapitow"> 3 </output>
+					<output id="odmiana" name="odmiana" for="ileakapitow"> akapity</output> (czyli około
+					<output id="znaki" name="znaki" for="ileakapitow"> 2000 </output> znaków).
+				</p>
+			</div>
+			<div class="svg-wrapper">
+				<svg height="40" width="180" xmlns="http://www.w3.org/2000/svg">
+					<rect class="shape" height="40" width="180" rx="10" />
+				</svg>
+				<div class="text">Kopiuj do schowka</div>
+			</div>
+		</div>
 		<div id="trzyAkapity">
 		</div>
 	</div>
+	<script src='js/morawiecki.js'></script>
 </body>

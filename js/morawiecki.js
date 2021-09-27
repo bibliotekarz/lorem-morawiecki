@@ -4,6 +4,9 @@ function switchText() {
         "Realizowany przez rząd projekt",
         "Budowany z sukcesem narodowy konstrukt",
         "Najistotniejszy dla przyszłości kraju koncept rządu",
+        "Wielka operacja gospodarcza",
+        "Zjednoczona Prawica realizator projektu",
+        "Myślą przewodnią, która przyświeca mi przy wszystkich działaniach",
         "Wieloletnie dzieło naszego rządu"];
     let string1 = ["Polski ład",
         "Mieszkanie plus",
@@ -23,7 +26,9 @@ function switchText() {
         "w sercu Europy", "pomiędzy wschodem a zachodem",
         "w zdradzonej w Jałcie Polsce",
         "w dumnym kraju nad Wisłą",
+        "w miejscu gdzie rozwój i sprawy społeczne to jedno i to samo",
         "w stolicy grupy wyszechgradzkiej",
+        "tu gdzie kwitnąca gospodarka jest warunkiem prowadzenia szczodrej polityki społecznej",
         "w samym centrum trójmorza"];
     let string4 = ["królewski szczep piastowy",
         "mężny naród obrońców Chrześcijaństwa",
@@ -31,6 +36,9 @@ function switchText() {
         "rząd zjednoczonej prawicy",
         "naród potomków husarii",
         "wielki naród polski",
+        "Rząd, na którego czele stoję",
+        "kraj, który nie poddał się tyranii absolutyzmu, germanizacji, rusyfikacji, nazizmu ani komunizmu",
+        "naród który w dramatycznych okolicznościach bronił człowieczeństwa",
         "kraj w którym panuje prawo i sprawiedliwość"];
     let string5 = ["osiąga we współczesnym świecie sukcesy co najmniej na miarę cesarstwa rzymskiego.",
         "wybrał własną można powiedzieć - trzecią drogę pomyślnego rozwoju.",
@@ -38,6 +46,9 @@ function switchText() {
         "zmierza ku świetlanej przyszłości, pełnej dobrobytu i demokracji.",
         "kroczy ścieżką światowego lidera nowoczesnych technologii.",
         "nie potrzebuje pouczeń ze strony tych, którzy za nic mają honor i przyzwoitość.",
+        "realizuje nasze pragnienie wolności i pragnienie prawdy.",
+        "buduje ten głęboki wymiar wspólnotowy który jest nieodłącznie wpisany w naszą tradycję.",
+        "wprowadził stan wyjątkowy nie po to, żeby ograniczać wolność, ale żeby zapewniać wolność",
         "potrafi zbudować gospodarcze eldorado oparte na tradycji chrześcijańskiej."];
 
     let ile = parseInt(document.getElementById("ileakapitow").value);
@@ -66,7 +77,6 @@ function start() {
     document.getElementById("ileakapitow").addEventListener("click", generujAkapity);
     document.getElementById("ileakapitow").value = 3;
     document.getElementById("svg-wrapper").style.display = "none";
-    document.getElementById("kopiuj").innerHTML = "Kopiuj do schowka";
     document.getElementById("kopiuj").addEventListener("click", copyTextToClipboard);
 
     switchText();
@@ -78,8 +88,10 @@ function przelicz() {
     document.getElementById("odmiana").value = odmien(ile, akapityodmiana);
     document.getElementById("znaki").value = ile * 660;
 }
-function generujAkapity() {                                                                                   
+function generujAkapity() {
     document.getElementById("svg-wrapper").style.display = "inherit";
+
+    document.getElementById("kopiuj").innerHTML = "Kopiuj do schowka";
     let ile = parseInt(document.getElementById("ileakapitow").value);
     let i = 0;
     let tekst = "";
@@ -90,9 +102,9 @@ function generujAkapity() {
 
     document.getElementById("trzyAkapity").innerHTML = "<div class=\"tareaValue\">" + tekst + "</div>";
     return
+
 }
 
-// TODO: dodać kopiowanie do schowka
 var odmien = function (value, numerals) {
     let ile = parseInt(document.getElementById("ileakapitow").value);
 
@@ -105,16 +117,11 @@ var odmien = function (value, numerals) {
         vo.push(numerals[0]);
     else if (((t1 < 10 || t1 > 20) && t0 >= 2 && t0 <= 4) && numerals[2])
         vo.push(numerals[2]);
-
-    console.log(vo);
     return vo.join(' ');
 };
 
-function copyTextToClipboard(){
+function copyTextToClipboard() {
 
-navigator.clipboard.writeText(document.getElementById("trzyAkapity").innerText);
-document.getElementById("kopiuj").innerHTML = "Tekst jest schowku";
-/* document.getElementById("kopiuj").addEventListener("click", copyTextToClipboard);
-Alert the copied text 
-alert("Copied the text: " + copyText);*/
+    navigator.clipboard.writeText(document.getElementById("trzyAkapity").innerText);
+    document.getElementById("kopiuj").innerHTML = "Tekst jest schowku";
 }
